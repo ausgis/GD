@@ -7,8 +7,14 @@
 #' \method{print}{gd}(x, ...)
 #' \method{plot}{gd}(x, sig = TRUE, ...)
 #'
+#' @aliases gd print.gd plot.gd
+#'
 #' @param formula A formula of response and explanatory variables
 #' @param data A data.frame includes response and explanatory variables
+#' @param x A list of factor detector results
+#' @param sig If TRUE, only spatial associations that are significant at the 0.05 level will be plotted;
+#' If FALSE, all spatial associations will be plotted.
+#' @param ... Ignore
 #'
 #' @examples
 #' g1 <- gd(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
