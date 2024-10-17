@@ -1,8 +1,7 @@
 #' Geographical detectors: interaction detector.
 #'
 #' @description Function for interaction detector calculation and visualization.
-#' The types of interactions
-#' include "Enhance, nonlinear", "Independent", "Enhance, bi-",
+#' The types of interactions include "Enhance, nonlinear", "Independent", "Enhance, bi-",
 #' "Weaken, uni-" and "Weaken, nonlinear".
 #'
 #' @usage gdinteract(formula, data = NULL)
@@ -16,9 +15,6 @@
 #' @param x A list of interaction detector results
 #' @param ... Ignore
 #'
-#' @importFrom utils combn
-#' @importFrom graphics plot axis title legend text box
-#'
 #' @examples
 #' gi1 <- gdinteract(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
 #' gi1
@@ -30,7 +26,7 @@
 #'
 #' @export
 gdinteract <- function(formula, data = NULL){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){
@@ -45,7 +41,7 @@ gdinteract <- function(formula, data = NULL){
   }
 
   variable <- colnames(explanatory)
-  result <- as.data.frame(t(combn(variable,2)))
+  result <- as.data.frame(t(utils::combn(variable,2)))
   names(result) <- c("var1","var2")
 
   y <- response
@@ -120,24 +116,24 @@ plot.gdinteract <- function(x, ...){
     col.matrix <- t(col.matrix[-1, -matrix.dim])
 
     # debug: use plot to reduce time consumption
-    par(pty = "s") # debug: use par(pty = "s") and asp = 1 to set same axes scale
-    plot(row(qv.matrix), col(qv.matrix),
-         cex = qv.matrix * 5, pch = 20, col = col.matrix,
-         xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
-         axes = FALSE, ann = FALSE, asp = 1)
-    axis(1, at = 1:(matrix.dim - 1), labels = unique(resultdata$var1))
-    axis(2, at = 1:(matrix.dim - 1), labels = unique(resultdata$var2), las = 1)
-    title(xlab = "Variable")
+    graphics::par(pty = "s") # debug: use par(pty = "s") and asp = 1 to set same axes scale
+    graphics::plot(row(qv.matrix), col(qv.matrix),
+                   cex = qv.matrix * 5, pch = 20, col = col.matrix,
+                   xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
+                   axes = FALSE, ann = FALSE, asp = 1)
+    graphics::axis(1, at = 1:(matrix.dim - 1), labels = unique(resultdata$var1))
+    graphics::axis(2, at = 1:(matrix.dim - 1), labels = unique(resultdata$var2), las = 1)
+    graphics::title(xlab = "Variable")
     lgd.point <- c(min(qv.matrix, na.rm = TRUE), mean(qv.matrix, na.rm = TRUE), max(qv.matrix, na.rm = TRUE))
 
     k <- sort(unique(k.type))
-    legend("bottomright", c(sprintf("%.2f", round(lgd.point, digits = 2)), interact.type[k]),
-           col = c(rep("black", 3), interact.col[k]),
-           pch = 20, pt.cex = c(lgd.point * 5, 1, 1), cex = 0.8)
+    graphics::legend("bottomright", c(sprintf("%.2f", round(lgd.point, digits = 2)), interact.type[k]),
+                     col = c(rep("black", 3), interact.col[k]),
+                     pch = 20, pt.cex = c(lgd.point * 5, 1, 1), cex = 0.8)
     k.maxq <- which(qv.matrix == max(qv.matrix, na.rm = TRUE), arr.ind = TRUE)
-    text(x = k.maxq[1], y = k.maxq[2], labels = round(qv.matrix[k.maxq], digits = 4))
-    box()
-    par(pty = "m")
+    graphics::text(x = k.maxq[1], y = k.maxq[2], labels = round(qv.matrix[k.maxq], digits = 4))
+    graphics::box()
+    graphics::par(pty = "m")
   }
 }
 

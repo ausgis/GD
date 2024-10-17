@@ -142,10 +142,10 @@ plot.gdrisk <- function(x, ...){
     # debug: adjust cex.size
     cex.size <- ifelse(rows == cols, (40 - mar.y * cols)/(cols * (matrix.dim - 1)),
                        (60 - mar.y * cols)/(rows * floor(cols/rows) * (matrix.dim - 1))) * 1.1
-    plot(row(riskmatrix), col(riskmatrix),
-         cex = cex.size, pch = 15, col = col.matrix,
-         xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
-         axes = FALSE, ann = FALSE, asp = 1)
+    graphics::plot(row(riskmatrix), col(riskmatrix),
+                   cex = cex.size, pch = 15, col = col.matrix,
+                   xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
+                   axes = FALSE, ann = FALSE, asp = 1)
     graphics::axis(1, at = 1:(matrix.dim - 1), labels = unique(vec$itv1), tck = -0.025)
     graphics::axis(2, at = 1:(matrix.dim - 1), labels = unique(vec$itv2), las = 1, tck = -0.025)
     graphics::title(main = names.result[i])
