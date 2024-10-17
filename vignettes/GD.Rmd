@@ -149,7 +149,7 @@ Power of determinants is computed using a $Q$-statistic:
 
 $$Q=1-\displaystyle \frac{\sum_{j=1}^{M} N_{j} \sigma_{j}^2}{N \sigma^2} $$
 
-where $N$ and $\sigma^2$ are the number and population variance of observations within the whole study area, and $N_{j}$ and $\sigma_{j}^2$ are the number and population variance of observations within the $j$ th ($j$=1,…,$M$) sub-region of an explantory variable. 
+where $N$ and $\sigma^2$ are the number and population variance of observations within the whole study area, and $N_{j}$ and $\sigma_{j}^2$ are the number and population variance of observations within the $j$ th ($j$=1,…,$M$) sub-region of an explanatory variable. 
 
 **Please note that in `R` environment, `sd` and `var` functions are used for computing sample standard deviation and sample variance.** If sample variance is used in the computation, the equation of $Q$-statistic can be converted to:
 
@@ -373,7 +373,7 @@ Zhang, Z., Song, Y., Archer, N. and Wu, P. Spatial disparity of urban performanc
 
 [1]: https://CRAN.R-project.org/package=GD
 [2]: https://www.tandfonline.com/doi/abs/10.1080/13658810802443457
-[3]: https://www.sciencedirect.com/science/article/pii/S1470160X16300735?via%3Dihub
+[3]: https://www.sciencedirect.com/science/article/abs/pii/S1470160X16300735?via%3Dihub
 [4]: https://ieeexplore.ieee.org/document/8307463/
 [5]: http://www.geodetector.cn
 [6]: https://scholar.google.com.au/citations?user=bNuxvgIAAAAJ&hl=en&oi=ao
