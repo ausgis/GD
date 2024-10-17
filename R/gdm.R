@@ -52,9 +52,9 @@
 #' }
 #'
 #' @export
-
+#'
 gdm <- function(formula, continuous_variable = NULL, data = NULL, discmethod, discitv){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = FALSE]
   if (formula.vars[2] == "."){

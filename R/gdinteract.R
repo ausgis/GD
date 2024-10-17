@@ -25,6 +25,7 @@
 #' }
 #'
 #' @export
+#'
 gdinteract <- function(formula, data = NULL){
   formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
