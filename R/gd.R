@@ -56,7 +56,7 @@ gd <- function(formula, data = NULL){
     m0 <- tapply(y, x, mean) # debug: use tapply
     m1 <- sum(m0^2)
     m2 <- sum(m0 * sqrt(count.x))^2/ny
-    lambda <- (m1 - m2) / (var(y) * (ny - 1) / ny)
+    lambda <- (m1 - m2) / (stats::var(y) * (ny - 1) / ny)
     p0 <- stats::pf(Fv, df1 = v1, df2 = v2, ncp = lambda)
     sig <- 1 - p0
     # return

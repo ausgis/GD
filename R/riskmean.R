@@ -26,7 +26,7 @@
 #' @export
 #'
 riskmean <- function(formula, data = NULL){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){

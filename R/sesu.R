@@ -30,7 +30,7 @@ sesu <- function(gdlist, su){
   sig <- t(sapply(gdlist, function(x) x$Factor.detector$Factor$sig))
 
   qv[which(sig >= 0.05)] <- NA
-  qv90 <- apply(qv, 1, function(x) quantile(x, 0.9, na.rm = TRUE))
+  qv90 <- apply(qv, 1, function(x) stats::quantile(x, 0.9, na.rm = TRUE))
 
   rnames <- su
   cnames <- var
