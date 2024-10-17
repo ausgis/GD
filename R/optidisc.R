@@ -15,8 +15,6 @@
 #' @param x A list of \code{optidisc} result
 #' @param ... Ignore
 #'
-#' @importFrom graphics par matplot axis matlines text hist abline
-#'
 #' @examples
 #' ## set optional discretization methods and numbers of intervals
 #' # optional methods: equal, natural, quantile, geometric, sd and manual
@@ -132,21 +130,21 @@ plot.optidisc <- function(x, ...){
 
   ### optimal discretization process
   cat("Optimal discretization process ...\n\n")
-  par(mfrow = c(rows, cols))
+  graphics::par(mfrow = c(rows, cols))
   for (i in 1:lr){
     qv.matrix <- x[[i]]$qv.matrix
     # use matplot to simplify visualization
     rname.qv <- rownames(qv.matrix)
     cname.qv <- colnames(qv.matrix)
     ncol.qv <- ncol(qv.matrix)
-    matplot(x = rname.qv, y = qv.matrix, type = "p",
-            pch = 1:ncol.qv - 1,
-            col = 1:ncol.qv + 1, main = names.result[i],
-            xaxt = "n", xlab = "Number of intervals", ylab = "Q value", las = 1)
-    axis(1, at = rname.qv, labels = rname.qv)
-    matlines(x = rname.qv, y = qv.matrix, type = "l",
-             lty = 1:ncol.qv,
-             col = 1:ncol.qv + 1)
+    graphics::matplot(x = rname.qv, y = qv.matrix, type = "p",
+                      pch = 1:ncol.qv - 1,
+                      col = 1:ncol.qv + 1, main = names.result[i],
+                      xaxt = "n", xlab = "Number of intervals", ylab = "Q value", las = 1)
+    graphics::axis(1, at = rname.qv, labels = rname.qv)
+    graphics::matlines(x = rname.qv, y = qv.matrix, type = "l",
+                       lty = 1:ncol.qv,
+                       col = 1:ncol.qv + 1)
     # debug: use text to replace legend; use the first value !is.na to determine text location
     text.location.x <- apply(qv.matrix, 2, function(x) rname.qv[which(!is.na(x))[1]])
     text.location.y <- apply(qv.matrix, 2, function(x) x[!is.na(x)][1])
@@ -154,23 +152,23 @@ plot.optidisc <- function(x, ...){
     text.location.x <- text.location.x[text.k]
     text.location.y <- text.location.y[text.k]
     text.pos <- ifelse(text.location.x == max(rname.qv), 2, 4)
-    text(x = text.location.x, y = text.location.y,
-         labels = cname.qv[text.k], pos = text.pos, col = c(1:ncol.qv)[text.k] + 1)
+    graphics::text(x = text.location.x, y = text.location.y,
+                   labels = cname.qv[text.k], pos = text.pos, col = c(1:ncol.qv)[text.k] + 1)
   }
-  par(mfrow = c(1, 1))
+  graphics::par(mfrow = c(1, 1))
 
   ### optimal discretization results
   cat("Optimal discretization result ...\n\n")
-  par(mfrow = c(rows, cols))
+  graphics::par(mfrow = c(rows, cols))
   for (i in 1:lr){
     var <- x[[i]]$discretization$var
     # debug: use basic plot functions for histogram
-    hist(var, 30, col = "gray", border = "gray",
-         main = names.result[i], xlab = "Variable", las = 1)
-    abline(v = x[[i]]$discretization$itv, col = "red")
-    box()
+    graphics::hist(var, 30, col = "gray", border = "gray",
+                   main = names.result[i], xlab = "Variable", las = 1)
+    graphics::abline(v = x[[i]]$discretization$itv, col = "red")
+    graphics::box()
   }
-  par(mfrow = c(1, 1))
+  graphics::par(mfrow = c(1, 1))
 }
 
 
