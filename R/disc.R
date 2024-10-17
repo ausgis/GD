@@ -38,7 +38,7 @@ disc <- function(var, n, method = "quantile", ManualItv){
     stop("var is not numeric")
   if (any(is.na(var))) {
     warning("var has missing values, omitted in finding classes")
-    var <- c(na.omit(var))
+    var <- c(stats::na.omit(var))
   }
 
   MethodEqual <- function(var, n){
@@ -46,17 +46,17 @@ disc <- function(var, n, method = "quantile", ManualItv){
   }
 
   MethodNatural <- function(var, n){ # debug: increase speed
-    getJenksBreaks(var, n+1)
+    BAMMtools::getJenksBreaks(var, n+1)
   }
 
   MethodQuantile <- function(var, n){
-    itv <- quantile(var, probs = seq(0, 1, length = n + 1))
+    itv <- stats::quantile(var, probs = seq(0, 1, length = n + 1))
     l0 <- length(unique(itv))
     if (l0 < n + 1){
       l1 <- l0
       l2 <- l0
       while(l2 < n + 1){
-        itv1 <- quantile(var, probs = seq(0, 1, length = l1 + 1))
+        itv1 <- stats::quantile(var, probs = seq(0, 1, length = l1 + 1))
         l2 <- length(unique(itv1))
         l1 <- l1 + 1
       }
@@ -101,11 +101,11 @@ disc <- function(var, n, method = "quantile", ManualItv){
       seqb <- (m-1) - seqa
       seqb <- seqb[which(seqb >= 0)]
       if (m <= 7) {
-        itvb1 <- mean(var) - seqb/2 * sd(var)
-        itvb2 <- mean(var) + seqb/2 * sd(var)
+        itvb1 <- mean(var) - seqb/2 * stats::sd(var)
+        itvb2 <- mean(var) + seqb/2 * stats::sd(var)
       } else {
-        itvb1 <- mean(var) - seqb/4 * sd(var)
-        itvb2 <- mean(var) + seqb/4 * sd(var)
+        itvb1 <- mean(var) - seqb/4 * stats::sd(var)
+        itvb2 <- mean(var) + seqb/4 * stats::sd(var)
       }
       itvb1 <- rev(itvb1)
       itvb1 <- itvb1[which(itvb1 > min(var))]
