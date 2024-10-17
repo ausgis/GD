@@ -17,10 +17,6 @@
 #' @param x A list of \code{disc} result
 #' @param ... Ignore
 #'
-#' @importFrom stats na.omit quantile sd runif
-#' @importFrom graphics hist abline
-#' @importFrom BAMMtools getJenksBreaks
-#'
 #' @examples
 #' ## method is default (quantile); number of intervals is 4
 #' ds1 <- disc(ndvi_40$Tempchange, 4)
@@ -152,8 +148,8 @@ print.disc <- function(x, ...){
 plot.disc <- function(x, ...){
   var <- x$var
   # debug: use basic plot functions for histogram
-  hist(var, 30, col = "gray", border = "gray", main = NULL, xlab = "Variable", las = 1)
-  abline(v = x$itv, col = "red")
+  graphics::hist(var, 30, col = "gray", border = "gray", main = NULL, xlab = "Variable", las = 1)
+  graphics::abline(v = x$itv, col = "red")
   box()
 }
 
