@@ -372,8 +372,8 @@ Zhang, Z., Song, Y., Archer, N. and Wu, P. Spatial disparity of urban performanc
 
 
 [1]: https://CRAN.R-project.org/package=GD
-[2]: https://www.tandfonline.com/doi/abs/10.1080/13658810802443457
-[3]: https://www.sciencedirect.com/science/article/abs/pii/S1470160X16300735?via%3Dihub
+[2]: https://doi.org/10.1080/13658810802443457
+[3]: https://doi.org/10.1016/j.ecolind.2016.02.052
 [4]: https://ieeexplore.ieee.org/document/8307463/
 [5]: http://www.geodetector.cn
 [6]: https://scholar.google.com.au/citations?user=bNuxvgIAAAAJ&hl=en&oi=ao
