@@ -50,6 +50,7 @@ riskmean <- function(formula, data = NULL){
   result
 }
 
+#' @export
 print.riskmean <- function(x, ...){
   lr <- length(x)
   names.result <- names(x)
@@ -63,6 +64,7 @@ print.riskmean <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.riskmean <- function(x, ...){
   lr <- length(x)
   names.result <- names(x)

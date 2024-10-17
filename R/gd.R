@@ -3,12 +3,6 @@
 #' @description Function for calculating power determinant using factor detector
 #' of geographical detectors and visualization.
 #'
-#' @usage gd(formula, data = NULL)
-#' \method{print}{gd}(x, ...)
-#' \method{plot}{gd}(x, sig = TRUE, ...)
-#'
-#' @aliases gd print.gd plot.gd
-#'
 #' @param formula A formula of response and explanatory variables
 #' @param data A data.frame includes response and explanatory variables
 #' @param x A list of factor detector results
@@ -73,12 +67,14 @@ gd <- function(formula, data = NULL){
   result
 }
 
+#' @export
 print.gd <- function(x, ...){
   rs0 <- x[[1]]
   print(rs0)
   invisible(x)
 }
 
+#' @export
 plot.gd <- function(x, sig = TRUE, ...){
   rs0 <- x[[1]]
   rs1 <- rs0[order(rs0$qv, decreasing = TRUE),]

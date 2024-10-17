@@ -83,6 +83,7 @@ gdinteract <- function(formula, data = NULL){
   result
 }
 
+#' @export
 print.gdinteract <- function(x, ...){
   vec <- x[[1]]
   intmatrix <- v2m(round(vec$qv12, digits=4), diag=FALSE)
@@ -96,6 +97,7 @@ print.gdinteract <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.gdinteract <- function(x, ...){
   resultdata <- x[[1]]
   if (nrow(resultdata)==1){

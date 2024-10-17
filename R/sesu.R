@@ -3,8 +3,6 @@
 #' @description Function for comparison of size effects of spatial units
 #' in spatial heterogeneity analysis.
 #'
-#' @usage sesu(gdlist, su)
-#'
 #' @param gdlist A list of \code{gdm} result or \code{gd} result
 #' @param su A vector of sizes of spatial units
 #'

@@ -95,6 +95,7 @@ optidisc <- function(formula, data,
   optidisc.list
 }
 
+#' @export
 print.optidisc <- function(x, ...){
   namesx <- names(x)
   for (i in 1:length(namesx)){
@@ -112,6 +113,7 @@ print.optidisc <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.optidisc <- function(x, ...){
   # plot optimal discretization results
   lr <- length(x)

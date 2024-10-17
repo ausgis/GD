@@ -2,13 +2,9 @@
 % Please edit documentation in R/disc.R
 \name{disc}
 \alias{disc}
-\alias{print.disc}
-\alias{plot.disc}
 \title{Generates discretization parameters for continuous data.}
 \usage{
 disc(var, n, method = "quantile", ManualItv)
-\method{print}{disc}(x, ...)
-\method{plot}{disc}(x, ...)
 }
 \arguments{
 \item{var}{A numeric vector of continuous variable}

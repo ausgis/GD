@@ -116,6 +116,7 @@ gdm <- function(formula, continuous_variable = NULL, data = NULL, discmethod, di
   result
 }
 
+#' @export
 print.gdm <- function(x, ...){
   ### print optimal discretization
   if (length(x$Discretization)==0){
@@ -139,6 +140,7 @@ print.gdm <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.gdm <- function(x, ...){
   ### plot optimal discretization
   lrd <- length(x$Discretization)

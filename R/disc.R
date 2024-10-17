@@ -4,12 +4,6 @@
 #' different outputs, including discretization intervals, numbers of values
 #' within intervals, and visualization of discretization.
 #'
-#' @usage disc(var, n, method = "quantile", ManualItv)
-#' \method{print}{disc}(x, ...)
-#' \method{plot}{disc}(x, ...)
-#'
-#' @aliases disc print.disc plot.disc
-#'
 #' @param var A numeric vector of continuous variable
 #' @param n The numeber of intervals
 #' @param method A character of discretization method
@@ -140,11 +134,13 @@ disc <- function(var, n, method = "quantile", ManualItv){
   disc.list
 }
 
+#' @export
 print.disc <- function(x, ...){
   cat("Intervals:\n", x$itv)
   invisible(x)
 }
 
+#' @export
 plot.disc <- function(x, ...){
   var <- x$var
   # debug: use basic plot functions for histogram

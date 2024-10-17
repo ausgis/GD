@@ -70,6 +70,7 @@ gdeco <- function(formula, data = NULL){
   fv
 }
 
+#' @export
 print.gdeco <- function(x, ...){
   vec <- x[[1]]
   ecomatrix <- v2m(as.character(vec$eco), diag=FALSE) # debug: add as.character
@@ -83,6 +84,7 @@ print.gdeco <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.gdeco <- function(x, ...){
   resultdata <- x[[1]]
   if (nrow(resultdata) == 1){

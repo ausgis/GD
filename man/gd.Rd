@@ -2,13 +2,9 @@
 % Please edit documentation in R/gd.R
 \name{gd}
 \alias{gd}
-\alias{print.gd}
-\alias{plot.gd}
 \title{Geographical detectors: factor detector.}
 \usage{
 gd(formula, data = NULL)
-\method{print}{gd}(x, ...)
-\method{plot}{gd}(x, sig = TRUE, ...)
 }
 \arguments{
 \item{formula}{A formula of response and explanatory variables}

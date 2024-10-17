@@ -81,6 +81,7 @@ gdrisk <- function(formula, data = NULL){
   result
 }
 
+#' @export
 print.gdrisk <- function(x, ...){
   lr <- length(x)
   names.result <- names(x)
@@ -104,6 +105,7 @@ print.gdrisk <- function(x, ...){
   invisible(x)
 }
 
+#' @export
 plot.gdrisk <- function(x, ...){
   lr <- length(x)
   names.result <- names(x)
