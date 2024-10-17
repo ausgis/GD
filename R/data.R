@@ -6,14 +6,14 @@
 #' The references of more details and data sources will be added.
 #'
 #' @name NDVI
-#' @format \code{ndvi_5}: A data frame with 46295 rows and 7 variables
+#' @format
+#' \code{ndvi_5}: A data frame with 46295 rows and 7 variables
 #' \code{ndvi_10}: A data frame with 11567 rows and 7 variables
 #' \code{ndvi_20}: A data frame with 2892 rows and 7 variables
 #' \code{ndvi_30}: A data frame with 1290 rows and 7 variables
 #' \code{ndvi_40}: A data frame with 713 rows and 7 variables
 #' \code{ndvi_50}: A data frame with 469 rows and 7 variables
 #' @docType data
-#' @author Yongze Song \email{yongze.song@postgrad.curtin.edu.au}
 #' @keywords dataset NDVI
 "ndvi_5"
 
@@ -37,11 +37,11 @@
 #' The references of more details and data sources will be added.
 #'
 #' @name H1N1
-#' @format \code{h1n1_50}: A data frame with 3977 rows and 11 variables
+#' @format
+#' \code{h1n1_50}: A data frame with 3977 rows and 11 variables
 #' \code{h1n1_100}: A data frame with 987 rows and 11 variables
 #' \code{h1n1_150}: A data frame with 443 rows and 11 variables
 #' @docType data
-#' @author Yongze Song \email{yongze.song@postgrad.curtin.edu.au}
 #' @keywords dataset H1N1
 "h1n1_50"
 
