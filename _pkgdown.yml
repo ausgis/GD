@@ -1,4 +1,49 @@
 url: https://ausgis.github.io/GD/
 template:
   bootstrap: 5
+  math-rendering: mathjax
+  light-switch: true
 
+navbar:
+  structure:
+    right: [search, github]
+    left: [reference, articles, news]
+  components:
+    articles:
+      text: Vignettes
+      menu:
+      - text: Optimal Parameters-based Geographical Detectors (OPGD) Model for Spatial Heterogeneity Analysis and Factor Exploration
+        href: articles/GD.html
+
+authors:
+  Yongze Song:
+    href: https://yongzesong.com/
+  Wenbo Lv:
+    href: https://spatlyu.github.io/
+
+reference:
+- title: Model
+  contents:
+  - gdm
+  - gd
+  - gdinteract
+  - gdeco
+  - gdrisk
+  - sesu
+
+- title: Utils
+  contents:
+  - disc
+  - optidisc
+  - v2m
+  - riskmean
+
+- title: Data
+  contents:
+  - NDVI
+  - H1N1
+
+- title: S3 Methods
+  contents:
+  - starts_with("plot")
+  - starts_with("print")
