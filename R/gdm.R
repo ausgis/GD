@@ -17,8 +17,6 @@
 #' @param x A list of \code{gdm} result
 #' @param ... Ignore
 #'
-#' @importFrom grid grid.newpage pushViewport viewport grid.layout
-#'
 #' @examples
 #' ###############
 #' ## NDVI: ndvi_40
