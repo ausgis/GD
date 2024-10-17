@@ -6,8 +6,6 @@
 #' interaction detector result or ecological detector to a lower
 #' triangular matrix.
 #'
-#' @usage v2m(vec, diag = FALSE)
-#'
 #' @param vec A data.frame of risk/interaction/ecological detector
 #' result of a strata variable
 #' @param diag TRUE/FALSE, indicating if the output matrix is a diagonal matrix.

@@ -150,6 +150,6 @@ plot.disc <- function(x, ...){
   # debug: use basic plot functions for histogram
   graphics::hist(var, 30, col = "gray", border = "gray", main = NULL, xlab = "Variable", las = 1)
   graphics::abline(v = x$itv, col = "red")
-  box()
+  graphics::box()
 }
 

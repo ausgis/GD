@@ -13,8 +13,6 @@
 #' @param x a list of risk mean values
 #' @param ... ignore
 #'
-#' @importFrom graphics par barplot box
-#'
 #' @examples
 #' rm1 <- riskmean(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
 #' rm1
@@ -81,14 +79,14 @@ plot.riskmean <- function(x, ...){
   rows <- ceiling(lr/cols)
 
   max.length.name <- max(sapply(x, function(x) max(nchar(as.character(x$itv)))))
-  par(mfrow = c(rows, cols), mar = c(4.1, 3.1 + max.length.name/4, 3.1, 2.1))
+  graphics::par(mfrow = c(rows, cols), mar = c(4.1, 3.1 + max.length.name/4, 3.1, 2.1))
   for (i in 1:lr){ # debug: use barplot
     vec <- rev(x[[i]]$meanrisk)
     names(vec) <- rev(as.character(x[[i]]$itv))
     vec.col <- ifelse(vec == min(vec), "blue", ifelse(vec == max(vec), "red", "gray"))
-    barplot(vec, horiz = TRUE, col = vec.col, xlab = "Mean Value",
-            main = names.result[i], las = 1)
+    graphics::barplot(vec, horiz = TRUE, col = vec.col, xlab = "Mean Value",
+                      main = names.result[i], las = 1)
   }
-  par(mfrow = c(1, 1), mar = c(5.1, 4.1, 4.1, 2.1))
+  graphics::par(mfrow = c(1, 1), mar = c(5.1, 4.1, 4.1, 2.1))
 }
 
