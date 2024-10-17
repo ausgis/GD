@@ -9,12 +9,13 @@
 [![Downloads_All](https://badgen.net/cran/dt/GD?color=orange)](https://CRAN.R-project.org/package=GD)
 [![Downloads](https://cranlogs.r-pkg.org/badges/GD)](https://CRAN.R-project.org/package=GD)
 [![R-universe](https://ausgis.r-universe.dev/badges/GD)](https://ausgis.r-universe.dev/GD)
+[![DOI](https://ausgis.github.io/badges/gos_paper.svg)](https://doi.org/10.1080/15481603.2020.1760434)
 
 <!-- badges: end -->
 
 **Geographical Detectors for Assessing Spatial Factors**
 
-Please cite **geosimilarity** as:
+Please cite **GD** as:
 
 > Song, Y., Wang, J., Ge, Y. & Xu, C. (2020) An optimal parameters-based
 > geographical detector model enhances geographic characteristics of
