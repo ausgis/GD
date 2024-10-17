@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![CRAN](https://www.r-pkg.org/badges/version/GD)](https://CRAN.R-project.org/package=GD)
+[![Downloads_All](https://badgen.net/cran/dt/GD?color=orange)](https://CRAN.R-project.org/package=GD)
 [![Downloads](https://cranlogs.r-pkg.org/badges/GD)](https://CRAN.R-project.org/package=GD)
 [![R-universe](https://ausgis.r-universe.dev/badges/GD)](https://ausgis.r-universe.dev/GD)
 
