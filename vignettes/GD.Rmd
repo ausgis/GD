@@ -17,9 +17,8 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "##",
-  fig.path = "man/figures/gd/"
+  echo = TRUE,
+  comment = "##"
 )
 ```
 
@@ -160,7 +159,7 @@ where $s^2$ and $s_{j}^2$ are sample variance of observations in the whole study
 
 
 
-![**Figure 1**. General calculation process and relationships of functions in GD package ([Song et al. 2020][7])](./fig/Figure2.png){width=400px}
+![**Figure 1**. General calculation process and relationships of functions in GD package ([Song et al. 2020][7])](../man/figures/Figure2.png){width=400px}
 
 Further information can be found on the [manual][1] of **GD** package.
 
@@ -173,7 +172,7 @@ More applications of geographical detectors are listed on [Geodetector website][
 
 Categorical variables are required for geographical detectors, so continuous variables should be discretized before modelling. **GD** package provides two options: discretization with given parameters, including discretization methods and numbers of intervals, and optimal discretization with a series of optional parameter combinations. Dataset `ndvi_40` is used as an example for explanation.
 
-```{r, eval = FALSE}
+```r
 install.packages("GD")
 ```
 
@@ -208,7 +207,7 @@ plot(odc1)
 ```
 
 
-![**Figure 2**. Process and results of optimal spatial data discretization](./fig/Figure3.png){width=600px}
+![**Figure 2**. Process and results of optimal spatial data discretization](../man/figures/Figure3.png){width=600px}
 
 &nbsp; 
 
@@ -250,7 +249,7 @@ plot(g3)
 ```
 
 
-![**Figure 3**. Results of factor detector](./fig/Figure4.png){width=300px}
+![**Figure 3**. Results of factor detector](../man/figures/Figure4.png){width=300px}
 
 
 ### 4.2 Risk detector: `riskmean` and `gdrisk`
@@ -282,7 +281,7 @@ plot(gr2)
 ```
 
 
-![**Figure 4**. Results of risk detector](./fig/Figure5.png){width=500px}
+![**Figure 4**. Results of risk detector](../man/figures/Figure5.png){width=500px}
 
 
 ### 4.3 Interaction detector: `gdinteract`
@@ -297,7 +296,7 @@ gi2
 plot(gi2)
 ```
 
-![**Figure 5**. Results of interaction detector](./fig/Figure6.png){width=400px}
+![**Figure 5**. Results of interaction detector](../man/figures/Figure6.png){width=400px}
 
 
 ### 4.4 Ecological detector: `gdeco`
@@ -313,7 +312,7 @@ plot(gd3)
 ```
 
 
-![**Figure 6**. Results of ecological detector](./fig/Figure7.png){width=300px}
+![**Figure 6**. Results of ecological detector](../man/figures/Figure7.png){width=300px}
 
 &nbsp; 
 
@@ -332,10 +331,10 @@ sesu(gdlist, su) ## size effects of spatial units
 ```
 
 
-![**Figure 7**. Spatial scale effects](./fig/Figure8.png){width=350px}
+![**Figure 7**. Spatial scale effects](../man/figures/Figure8.png){width=350px}
 
  
-![**Figure 8**. Overview of global research using geographical detector model (*cumulative citations were updated on June 2020*). ([Song et al. 2020][7])](./fig/Figure1.png){width=300px}
+![**Figure 8**. Overview of global research using geographical detector model (*cumulative citations were updated on June 2020*). ([Song et al. 2020][7])](../man/figures/Figure1.png){width=300px}
 
 
 &nbsp; 
