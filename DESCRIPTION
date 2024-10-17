@@ -34,7 +34,6 @@ Depends: R (>= 4.1.0)
 Imports: 
     BAMMtools,
     graphics,
-    grid,
     stats,
     utils
 Suggests: 
