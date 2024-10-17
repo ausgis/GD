@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 &nbsp; 
 
 
-`Current version: GD v10.3`
+`Current version: GD v10.5`
 
 
 &nbsp; 
