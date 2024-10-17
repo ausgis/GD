@@ -14,10 +14,6 @@
 #' @param x A list of ecological detector results
 #' @param ... Ignore
 #'
-#' @importFrom stats qf
-#' @importFrom utils combn
-#' @importFrom graphics plot axis text box par
-#'
 #' @examples
 #' ge1 <- gdeco(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
 #' ge1
@@ -29,7 +25,7 @@
 #'
 #' @export
 gdeco <- function(formula, data = NULL){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){
@@ -44,7 +40,7 @@ gdeco <- function(formula, data = NULL){
   }
 
   variable <- colnames(explanatory)
-  fv <- as.data.frame(t(combn(variable,2)))
+  fv <- as.data.frame(t(utils::combn(variable,2)))
   names(fv) <- c("var1","var2")
 
   FunF <- function(y, x1, x2){
@@ -52,7 +48,7 @@ gdeco <- function(formula, data = NULL){
     g1 <- gd(y ~ x1, data = data.frame(y, x1))
     g2 <- gd(y ~ x2, data = data.frame(y, x2))
     fvalue <- g2$Factor$qv / g1$Factor$qv
-    f0 <- qf(0.9, df1 = n - 1, df2 = n - 1)
+    f0 <- stats::qf(0.9, df1 = n - 1, df2 = n - 1)
     eco <- ifelse(fvalue > f0 | 1/fvalue > f0 , "Y", "N")
 
     eco <- factor(eco, levels = c("Y", "N"))
@@ -104,17 +100,17 @@ plot.gdeco <- function(x, ...){
     col.matrix <- t(col.matrix[-1, -matrix.dim])
 
     # debug: use plot to increase speed
-    par(pty = "s")
-    plot(row(ecomatrix), col(ecomatrix),
-         cex = 30/(matrix.dim - 1), pch = 15, col = col.matrix,
-         xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
-         axes = FALSE, ann = FALSE, asp = 1)
-    axis(1, at = 1:(matrix.dim - 1), labels = varname[1:(matrix.dim - 1)])
-    axis(2, at = 1:(matrix.dim - 1), labels = varname[2:matrix.dim], las = 1)
-    title(xlab = "Variable")
-    text(row(ecomatrix), col(ecomatrix), labels = ecomatrix)
-    box()
-    par(pty = "m")
+    graphics::par(pty = "s")
+    graphics::plot(row(ecomatrix), col(ecomatrix),
+                   cex = 30/(matrix.dim - 1), pch = 15, col = col.matrix,
+                   xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
+                   axes = FALSE, ann = FALSE, asp = 1)
+    graphics::axis(1, at = 1:(matrix.dim - 1), labels = varname[1:(matrix.dim - 1)])
+    graphics::axis(2, at = 1:(matrix.dim - 1), labels = varname[2:matrix.dim], las = 1)
+    graphics::title(xlab = "Variable")
+    graphics::text(row(ecomatrix), col(ecomatrix), labels = ecomatrix)
+    graphics::box()
+    graphics::par(pty = "m")
   }
 }
 
