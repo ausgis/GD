@@ -5,10 +5,6 @@
 #'
 #' @param formula A formula of response and explanatory variables
 #' @param data A data.frame includes response and explanatory variables
-#' @param x A list of factor detector results
-#' @param sig If TRUE, only spatial associations that are significant at the 0.05 level will be plotted;
-#' If FALSE, all spatial associations will be plotted.
-#' @param ... Ignore
 #'
 #' @examples
 #' g1 <- gd(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
@@ -67,6 +63,9 @@ gd <- function(formula, data = NULL){
   result
 }
 
+#' print factor detector results
+#' @param x A list of factor detector results
+#' @param ... Ignore
 #' @export
 print.gd <- function(x, ...){
   rs0 <- x[[1]]
@@ -74,6 +73,11 @@ print.gd <- function(x, ...){
   invisible(x)
 }
 
+#' plot factor detector results
+#' @param x A list of factor detector results
+#' @param sig If TRUE, only spatial associations that are significant at the 0.05 level will be plotted;
+#' If FALSE, all spatial associations will be plotted.
+#' @param ... Ignore
 #' @export
 plot.gd <- function(x, sig = TRUE, ...){
   rs0 <- x[[1]]

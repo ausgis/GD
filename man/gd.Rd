@@ -10,13 +10,6 @@ gd(formula, data = NULL)
 \item{formula}{A formula of response and explanatory variables}
 
 \item{data}{A data.frame includes response and explanatory variables}
-
-\item{x}{A list of factor detector results}
-
-\item{sig}{If TRUE, only spatial associations that are significant at the 0.05 level will be plotted;
-If FALSE, all spatial associations will be plotted.}
-
-\item{...}{Ignore}
 }
 \description{
 Function for calculating power determinant using factor detector

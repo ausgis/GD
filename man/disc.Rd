@@ -14,10 +14,6 @@ disc(var, n, method = "quantile", ManualItv)
 \item{method}{A character of discretization method}
 
 \item{ManualItv}{A numeric vector of manual intervals}
-
-\item{x}{A list of \code{disc} result}
-
-\item{...}{Ignore}
 }
 \description{
 Function for discretizing continuous data and obtaining the

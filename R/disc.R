@@ -8,8 +8,6 @@
 #' @param n The numeber of intervals
 #' @param method A character of discretization method
 #' @param ManualItv A numeric vector of manual intervals
-#' @param x A list of \code{disc} result
-#' @param ... Ignore
 #'
 #' @examples
 #' ## method is default (quantile); number of intervals is 4
