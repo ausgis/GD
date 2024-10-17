@@ -42,8 +42,3 @@ reference:
   contents:
   - NDVI
   - H1N1
-
-- title: S3 Methods
-  contents:
-  - starts_with("plot")
-  - starts_with("print")
