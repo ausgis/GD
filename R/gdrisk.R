@@ -13,9 +13,6 @@
 #' @param x A list of risk detector results
 #' @param ... Ignore
 #'
-#' @importFrom stats t.test
-#' @importFrom utils combn
-#'
 #' @examples
 #' gr1 <- gdrisk(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
 #' gr1
@@ -28,7 +25,7 @@
 #'
 #' @export
 gdrisk <- function(formula, data = NULL){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){
@@ -44,7 +41,7 @@ gdrisk <- function(formula, data = NULL){
     lengthy <- ifelse(length(y1) >= length(y2), length(y1), length(y2))
 
     tt <- tryCatch({
-      t.test(y1,y2)
+      stats::t.test(y1,y2)
     }, error = function(y1,y2){
       data.frame("statistic" = 0,
                  "parameter" = lengthy - 1,
@@ -62,7 +59,7 @@ gdrisk <- function(formula, data = NULL){
     # t test by pairs
     itv <- levels(factor(x))
     citv <- length(itv)
-    tv <- as.data.frame(t(combn(itv,2)))
+    tv <- as.data.frame(t(utils::combn(itv,2)))
     names(tv) <- c("itv1","itv2")
     tv$itv1 <- factor(tv$itv1, levels = itv)
     tv$itv2 <- factor(tv$itv2, levels = itv)
@@ -125,7 +122,7 @@ plot.gdrisk <- function(x, ...){
   max.length.name <- max(sapply(x, function(x)
     max(nchar(c(as.character(x$itv1),as.character(x$itv2))))))
   mar.y <- max.length.name/4
-  par(mfrow = c(rows, cols), pty = "s", mar = c(2, mar.y + 3.1, 2, 2))
+  graphics::par(mfrow = c(rows, cols), pty = "s", mar = c(2, mar.y + 3.1, 2, 2))
 
   for (i in 1:lr){
     vec <- x[[i]]
@@ -149,13 +146,13 @@ plot.gdrisk <- function(x, ...){
          cex = cex.size, pch = 15, col = col.matrix,
          xlim = c(0.5, (matrix.dim - 1) + 0.5), ylim = c(0.5, (matrix.dim - 1) + 0.5),
          axes = FALSE, ann = FALSE, asp = 1)
-    axis(1, at = 1:(matrix.dim - 1), labels = unique(vec$itv1), tck = -0.025)
-    axis(2, at = 1:(matrix.dim - 1), labels = unique(vec$itv2), las = 1, tck = -0.025)
-    title(main = names.result[i])
-    text(row(riskmatrix), col(riskmatrix), labels = riskmatrix)
-    box()
+    graphics::axis(1, at = 1:(matrix.dim - 1), labels = unique(vec$itv1), tck = -0.025)
+    graphics::axis(2, at = 1:(matrix.dim - 1), labels = unique(vec$itv2), las = 1, tck = -0.025)
+    graphics::title(main = names.result[i])
+    graphics::text(row(riskmatrix), col(riskmatrix), labels = riskmatrix)
+    graphics::box()
   }
 
-  par(mfrow = c(1, 1), pty = "m", mar = c(5.1, 4.1, 4.1, 2.1))
+  graphics::par(mfrow = c(1, 1), pty = "m", mar = c(5.1, 4.1, 4.1, 2.1))
 }
 
