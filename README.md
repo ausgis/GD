@@ -19,7 +19,7 @@
 - Install from [CRAN](https://CRAN.R-project.org/package=GD) with:
 
 ``` r
-install.packages("GD", dep = TRUE)
+install.packages("GD")
 ```
 
 - Install development binary version from
@@ -28,8 +28,7 @@ install.packages("GD", dep = TRUE)
 ``` r
 install.packages("GD",
                  repos = c("https://ausgis.r-universe.dev",
-                           "https://cran.rstudio.com/"),
-                 dep = TRUE)
+                           "https://cloud.r-project.org"))
 ```
 
 - Install development source version from
@@ -38,6 +37,5 @@ install.packages("GD",
 ``` r
 # install.packages("devtools")
 devtools::install_github("ausgis/GD",
-                         build_vignettes = TRUE,
-                         dep = TRUE)
+                         build_vignettes = TRUE)
 ```
