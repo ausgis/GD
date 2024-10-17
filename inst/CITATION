@@ -1,0 +1,32 @@
+citHeader("To cite GD Package in publications use:")
+
+bibentry(
+ bibtype="Article",
+ title="An optimal parameters-based geographical detector model enhances geographic characteristics of explanatory variables for spatial heterogeneity analysis: Cases with different types of spatial data",
+ journal="GIScience & Remote Sensing",
+ volume= "57",
+ pages="593-610",
+ year="2020",
+ author="Yongze Song and Jinfeng Wang and Yong Ge and Chengdong Xu",
+ doi="10.1080/15481603.2020.1760434")
+
+bibentry(
+ bibtype="Article",
+ title="A measure of spatial stratified heterogeneity",
+ journal="Ecological Indicators",
+ volume= "67",
+ pages="250-256",
+ year="2016",
+ author="Jinfeng Wang and Tonglin Zhang and Bojie Fu",
+ doi="10.1016/j.ecolind.2016.02.052")
+
+bibentry(
+ bibtype="Article",
+ title="Geographical Detectors-Based Health Risk Assessment and its Application in the Neural Tube Defects Study of the Heshun Region, China",
+ journal="International Journal of Geographical Information Science",
+ volume= "24",
+ number="1",
+ pages="107-127",
+ year="2010",
+ author="Jinfeng Wang and Xinhu Li and George Christakos and Yilan Liao and Tin Zhang and Xue Gu and Xiaoying Zheng",
+ doi="10.1080/13658810802443457")
