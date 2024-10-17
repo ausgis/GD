@@ -30,7 +30,7 @@
 optidisc <- function(formula, data,
                      discmethod = discmethod, discitv = discitv){
 
-  formula <- as.formula(formula) # debug: use formula to optimize discretization
+  formula <- stats::as.formula(formula) # debug: use formula to optimize discretization
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){

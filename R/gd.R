@@ -16,9 +16,6 @@
 #' If FALSE, all spatial associations will be plotted.
 #' @param ... Ignore
 #'
-#' @importFrom stats as.formula var pf
-#' @importFrom graphics barplot text
-#'
 #' @examples
 #' g1 <- gd(NDVIchange ~ Climatezone + Mining, data = ndvi_40)
 #' g1
@@ -27,7 +24,7 @@
 #' @export
 #'
 gd <- function(formula, data = NULL){
-  formula <- as.formula(formula)
+  formula <- stats::as.formula(formula)
   formula.vars <- all.vars(formula)
   response <- data[, formula.vars[1], drop = TRUE]
   if (formula.vars[2] == "."){
@@ -50,7 +47,7 @@ gd <- function(formula, data = NULL){
       count.x <- table(x)
     }
     # q value
-    rss <- function(y) (length(y) - 1) * var(y) # debug: use tapply
+    rss <- function(y) (length(y) - 1) * stats::var(y) # debug: use tapply
     qv <- 1 - sum(tapply(y, x, rss))/rss(y)
     # non-central F test
     v1 <- nx - 1
@@ -60,7 +57,7 @@ gd <- function(formula, data = NULL){
     m1 <- sum(m0^2)
     m2 <- sum(m0 * sqrt(count.x))^2/ny
     lambda <- (m1 - m2) / (var(y) * (ny - 1) / ny)
-    p0 <- pf(Fv, df1 = v1, df2 = v2, ncp = lambda)
+    p0 <- stats::pf(Fv, df1 = v1, df2 = v2, ncp = lambda)
     sig <- 1 - p0
     # return
     qv.sig <- c(qv = qv, sig = sig)
@@ -105,14 +102,14 @@ plot.gd <- function(x, sig = TRUE, ...){
   vec.col <- ifelse(vec == max(vec), "red", "gray")
 
   nchar.names <- max(nchar(as.character(rs2$variable)))
-  par(mar = c(5.1, 3.1 + nchar.names/4, 2.1, 2.1))
-  p1 <- barplot(height = rev(vec), names = rev(names(vec)),
-                horiz = TRUE, col = rev(vec.col), xlim = c(0, min(max(vec)*1.1, 1)),
-                xlab = "Q value", las = 1)
+  graphics::par(mar = c(5.1, 3.1 + nchar.names/4, 2.1, 2.1))
+  p1 <- graphics::barplot(height = rev(vec), names = rev(names(vec)),
+                          horiz = TRUE, col = rev(vec.col), xlim = c(0, min(max(vec)*1.1, 1)),
+                          xlab = "Q value", las = 1)
   vec.lable <- round(vec, digits = 4)
   k1 <- length(which(vec > max(vec)/2))
   k2 <- length(vec) - k1
   text.pos <- c(rep(2, k1), rep(4, k2))
-  text(x = vec, rev(p1), pos = text.pos, label = vec.lable)
-  par(mar = c(5.1, 4.1, 4.1, 2.1))
+  graphics::text(x = vec, rev(p1), pos = text.pos, label = vec.lable)
+  graphics::par(mar = c(5.1, 4.1, 4.1, 2.1))
 }
