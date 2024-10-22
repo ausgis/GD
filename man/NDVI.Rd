@@ -11,22 +11,14 @@
 \alias{ndvi_50}
 \title{Spatial datasets of vegetation index changes.}
 \format{
-\code{ndvi_5}: A data frame with 46295 rows and 7 variables
-\code{ndvi_10}: A data frame with 11567 rows and 7 variables
-\code{ndvi_20}: A data frame with 2892 rows and 7 variables
-\code{ndvi_30}: A data frame with 1290 rows and 7 variables
-\code{ndvi_40}: A data frame with 713 rows and 7 variables
-\code{ndvi_50}: A data frame with 469 rows and 7 variables
-
-An object of class \code{data.frame} with 11567 rows and 7 columns.
-
-An object of class \code{data.frame} with 2892 rows and 7 columns.
-
-An object of class \code{data.frame} with 1290 rows and 7 columns.
-
-An object of class \code{data.frame} with 713 rows and 7 columns.
-
-An object of class \code{data.frame} with 469 rows and 7 columns.
+\describe{
+\item{\code{ndvi_5}}{A data frame with 46,295 rows and 7 variables (5 km grid size).}
+\item{\code{ndvi_10}}{A data frame with 11,567 rows and 7 variables (10 km grid size).}
+\item{\code{ndvi_20}}{A data frame with 2,892 rows and 7 variables (20 km grid size).}
+\item{\code{ndvi_30}}{A data frame with 1,290 rows and 7 variables (30 km grid size).}
+\item{\code{ndvi_40}}{A data frame with 713 rows and 7 variables (40 km grid size).}
+\item{\code{ndvi_50}}{A data frame with 469 rows and 7 variables (50 km grid size).}
+}
 }
 \usage{
 ndvi_5
@@ -42,10 +34,9 @@ ndvi_40
 ndvi_50
 }
 \description{
-"NDVI" dataset is the NDVI change data from 2010 to 2014 in Inner Mongolia, China.
-This dataset consists of NDVI change and potential variables sampled from six sizes of
-spatial grid units, including 5 km, 10 km, 20 km, 30 km, 40 km and 50 km.
-The references of more details and data sources will be added.
+The "NDVI" dataset contains NDVI change data from 2010 to 2014 in Inner Mongolia, China.
+It includes NDVI change and potential variables sampled from six spatial grid sizes: 5 km, 10 km,
+20 km, 30 km, 40 km, and 50 km. References for more details and data sources will be provided.
 }
 \keyword{NDVI}
 \keyword{dataset}

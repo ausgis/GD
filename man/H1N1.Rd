@@ -8,13 +8,11 @@
 \alias{h1n1_150}
 \title{Spatial datasets of H1N1 flu incidences}
 \format{
-\code{h1n1_50}: A data frame with 3977 rows and 11 variables
-\code{h1n1_100}: A data frame with 987 rows and 11 variables
-\code{h1n1_150}: A data frame with 443 rows and 11 variables
-
-An object of class \code{data.frame} with 987 rows and 11 columns.
-
-An object of class \code{data.frame} with 443 rows and 11 columns.
+\describe{
+\item{\code{h1n1_50}}{A data frame with 3977 rows and 11 variables (50 km grid size).}
+\item{\code{h1n1_100}}{A data frame with 987 rows and 11 variables (100 km grid size).}
+\item{\code{h1n1_150}}{A data frame with 443 rows and 11 variables (150 km grid size).}
+}
 }
 \usage{
 h1n1_50
@@ -24,11 +22,10 @@ h1n1_100
 h1n1_150
 }
 \description{
-"H1N1" dataset is the provincial statistical incidences of
-influenza A virus subtype H1N1 in China in 2013.
-This dataset consists of H1N1 incidences and potential variables sampled from three sizes of
-spatial grid units, including 50 km, 100 km, and 150 km.
-The references of more details and data sources will be added.
+The "H1N1" dataset provides provincial statistical incidences of
+influenza A virus subtype H1N1 in China for 2013. It includes H1N1 incidences and related variables across
+three different spatial grid sizes: 50 km, 100 km, and 150 km.
+Detailed references and data sources will be added.
 }
 \keyword{H1N1}
 \keyword{dataset}
