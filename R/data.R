@@ -32,8 +32,8 @@
 #'
 #' @description "H1N1" dataset is the provincial statistical incidences of
 #' influenza A virus subtype H1N1 in China in 2013.
-#' This dataset consists of H1N1 incidences and potential variables sampled from four sizes of
-#' spatial grid units, including 10 km, 20 km, 50 km and 100 km.
+#' This dataset consists of H1N1 incidences and potential variables sampled from three sizes of
+#' spatial grid units, including 50 km, 100 km, and 150 km.
 #' The references of more details and data sources will be added.
 #'
 #' @name H1N1
