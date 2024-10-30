@@ -2,4 +2,4 @@
 
 0 errors | 0 warnings | 1 note
 
-* This release announces Wenbo Lv as the new maintainer of GD.
+* For updated information, please refer to the `NEWS.md` file.
