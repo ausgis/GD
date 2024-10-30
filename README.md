@@ -34,10 +34,10 @@ volume = {57},
 number = {5},
 pages = {593--610},
 year = {2020},
+month = {05},
 publisher = {Taylor \& Francis},
 doi = {10.1080/15481603.2020.1760434},
-URL = {https://doi.org/10.1080/15481603.2020.1760434},
-eprint = {https://doi.org/10.1080/15481603.2020.1760434}
+URL = {https://doi.org/10.1080/15481603.2020.1760434}
 }
 ```
 
