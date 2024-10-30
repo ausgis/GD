@@ -26,7 +26,7 @@ Please cite **GD** as:
 A BibTeX entry for LaTeX users is:
 
 ``` bib
-@article{doi:10.1080/15481603.2020.1760434,
+@article{Song2020opgd,
 author = {Yongze Song, Jinfeng Wang, Yong Ge and Chengdong Xu},
 title = {An optimal parameters-based geographical detector model enhances geographic characteristics of explanatory variables for spatial heterogeneity analysis: cases with different types of spatial data},
 journal = {GIScience \& Remote Sensing},
