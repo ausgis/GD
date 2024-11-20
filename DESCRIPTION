@@ -1,6 +1,6 @@
 Package: GD
 Title: Geographical Detectors for Assessing Spatial Factors
-Version: 10.8
+Version: 10.9
 Authors@R: 
     c(
       person(given = "Yongze", family = "Song",
