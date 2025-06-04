@@ -10,7 +10,7 @@
 [![Downloads](https://cranlogs.r-pkg.org/badges/GD)](https://CRAN.R-project.org/package=GD)
 [![R-universe](https://ausgis.r-universe.dev/badges/GD)](https://ausgis.r-universe.dev/GD)
 [![DOI](https://ausgis.github.io/badges/gos_paper.svg)](https://doi.org/10.1080/15481603.2020.1760434)
-
+[![R-CMD-check](https://github.com/ausgis/GD/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ausgis/GD/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 **Geographical Detectors for Assessing Spatial Factors**
