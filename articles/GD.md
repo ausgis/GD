@@ -2,7 +2,7 @@
 
  
 
-`Current version: GD v10.5`
+`Current version: GD v10.9`
 
  
 
