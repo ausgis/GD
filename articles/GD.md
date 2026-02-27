@@ -73,8 +73,8 @@ discretization and geographical detectors at the same time.
 
 ``` r
 ## install and library the pacakge
-install.packages("GD")
-library("GD")
+install.packages("GD", dep = TRUE)
+library(GD)
 
 ## Example 1
 ## NDVI: ndvi_40
