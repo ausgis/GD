@@ -2,6 +2,9 @@
 
 ## GD 10.9
 
+- Recommended to install `gdverse` version `1.6` or higher
+  ([\#5](https://github.com/ausgis/GD/issues/5)).
+
 ## GD 10.8
 
 CRAN release: 2024-11-20
