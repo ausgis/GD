@@ -1,0 +1,117 @@
+# GD
+
+**Geographical Detectors for Assessing Spatial Factors**
+
+Please cite **GD** as:
+
+> Song, Y., Wang, J., Ge, Y. & Xu, C. (2020) An optimal parameters-based
+> geographical detector model enhances geographic characteristics of
+> explanatory variables for spatial heterogeneity analysis: Cases with
+> different types of spatial data, *GIScience & Remote Sensing*,*57*(5),
+> 593-610. <https://doi.org/10.1080/15481603.2020.1760434>.
+
+A BibTeX entry for LaTeX users is:
+
+``` bib
+@article{Song2020opgd,
+author = {Yongze Song, Jinfeng Wang, Yong Ge and Chengdong Xu},
+title = {An optimal parameters-based geographical detector model enhances geographic characteristics of explanatory variables for spatial heterogeneity analysis: cases with different types of spatial data},
+journal = {GIScience \& Remote Sensing},
+volume = {57},
+number = {5},
+pages = {593--610},
+year = {2020},
+month = {05},
+publisher = {Taylor \& Francis},
+doi = {10.1080/15481603.2020.1760434},
+URL = {https://doi.org/10.1080/15481603.2020.1760434}
+}
+```
+
+## Installation
+
+- Install from [CRAN](https://CRAN.R-project.org/package=GD) with:
+
+``` r
+install.packages("GD")
+```
+
+- Install development binary version from
+  [R-universe](https://ausgis.r-universe.dev/GD) with:
+
+``` r
+install.packages("GD",repos = c("https://ausgis.r-universe.dev",
+                                "https://cloud.r-project.org"))
+```
+
+- Install development source version from
+  [GitHub](https://github.com/ausgis/GD) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ausgis/GD",build_vignettes = TRUE)
+```
+
+# Package index
+
+## Model
+
+- [`gdm()`](https://ausgis.github.io/GD/reference/gdm.md)
+  [`print(`*`<gdm>`*`)`](https://ausgis.github.io/GD/reference/gdm.md)
+  [`plot(`*`<gdm>`*`)`](https://ausgis.github.io/GD/reference/gdm.md) :
+  Geographical detectors: a one-step function.
+- [`gd()`](https://ausgis.github.io/GD/reference/gd.md)
+  [`print(`*`<gd>`*`)`](https://ausgis.github.io/GD/reference/gd.md)
+  [`plot(`*`<gd>`*`)`](https://ausgis.github.io/GD/reference/gd.md) :
+  Geographical detectors: factor detector.
+- [`gdinteract()`](https://ausgis.github.io/GD/reference/gdinteract.md)
+  [`print(`*`<gdinteract>`*`)`](https://ausgis.github.io/GD/reference/gdinteract.md)
+  [`plot(`*`<gdinteract>`*`)`](https://ausgis.github.io/GD/reference/gdinteract.md)
+  : Geographical detectors: interaction detector.
+- [`gdeco()`](https://ausgis.github.io/GD/reference/gdeco.md)
+  [`print(`*`<gdeco>`*`)`](https://ausgis.github.io/GD/reference/gdeco.md)
+  [`plot(`*`<gdeco>`*`)`](https://ausgis.github.io/GD/reference/gdeco.md)
+  : Geographical detectors: ecological detector.
+- [`gdrisk()`](https://ausgis.github.io/GD/reference/gdrisk.md)
+  [`print(`*`<gdrisk>`*`)`](https://ausgis.github.io/GD/reference/gdrisk.md)
+  [`plot(`*`<gdrisk>`*`)`](https://ausgis.github.io/GD/reference/gdrisk.md)
+  : Geographical detectors: risk detector.
+- [`sesu()`](https://ausgis.github.io/GD/reference/sesu.md) : Comparison
+  of size effects of spatial units.
+
+## Utils
+
+- [`disc()`](https://ausgis.github.io/GD/reference/disc.md) : Generates
+  discretization parameters for continuous data.
+- [`optidisc()`](https://ausgis.github.io/GD/reference/optidisc.md)
+  [`print(`*`<optidisc>`*`)`](https://ausgis.github.io/GD/reference/optidisc.md)
+  [`plot(`*`<optidisc>`*`)`](https://ausgis.github.io/GD/reference/optidisc.md)
+  : Optimal discretization for continuous variables and visualization.
+- [`v2m()`](https://ausgis.github.io/GD/reference/v2m.md) : Converts a
+  vector to a lower triangular matrix.
+- [`riskmean()`](https://ausgis.github.io/GD/reference/riskmean.md)
+  [`print(`*`<riskmean>`*`)`](https://ausgis.github.io/GD/reference/riskmean.md)
+  [`plot(`*`<riskmean>`*`)`](https://ausgis.github.io/GD/reference/riskmean.md)
+  : Geographical detectors: risk means in risk detector.
+
+## Data
+
+- [`ndvi_5`](https://ausgis.github.io/GD/reference/NDVI.md)
+  [`ndvi_10`](https://ausgis.github.io/GD/reference/NDVI.md)
+  [`ndvi_20`](https://ausgis.github.io/GD/reference/NDVI.md)
+  [`ndvi_30`](https://ausgis.github.io/GD/reference/NDVI.md)
+  [`ndvi_40`](https://ausgis.github.io/GD/reference/NDVI.md)
+  [`ndvi_50`](https://ausgis.github.io/GD/reference/NDVI.md) : Spatial
+  datasets of vegetation index changes.
+- [`h1n1_50`](https://ausgis.github.io/GD/reference/H1N1.md)
+  [`h1n1_100`](https://ausgis.github.io/GD/reference/H1N1.md)
+  [`h1n1_150`](https://ausgis.github.io/GD/reference/H1N1.md) : Spatial
+  datasets of H1N1 flu incidences
+
+# Articles
+
+### All vignettes
+
+- [Optimal Parameters-based Geographical Detectors (OPGD) Model for
+  Spatial Heterogeneity Analysis and Factor
+  Exploration](https://ausgis.github.io/GD/articles/GD.md):
