@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/ausgis/GD/blob/v10.9/inst/CITATION)
+[`inst/CITATION`](https://github.com/ausgis/GD/blob/main/inst/CITATION)
 
 Song Y, Wang J, Ge Y, Xu C (2020). “An optimal parameters-based
 geographical detector model enhances geographic characteristics of
