@@ -7,7 +7,7 @@ Authors@R:
              email = "yongze.song@outlook.com", 
              role = c("aut", "cph"),
              comment = c(ORCID = "0000-0003-3420-9622")),
-      person(given = "Wenbo", family = "Lv",
+      person(given = "Wenbo", family = "Lyu",
              email = "lyu.geosocial@gmail.com", 
              role = c("aut", "cre"),
              comment = c(ORCID = "0009-0002-6003-3800"))
