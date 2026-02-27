@@ -37,7 +37,7 @@ Imports:
     stats,
     utils
 Suggests: 
-    gdverse (>= 1.3),
+    gdverse (>= 1.6),
     knitr,
     rmarkdown
 LazyData: true

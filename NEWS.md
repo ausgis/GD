@@ -1,5 +1,7 @@
 # GD 10.9
 
+* Recommended to install `gdverse` version `1.6` or higher (#5).
+
 # GD 10.8
 
 * Recommended to install `gdverse` (>= 1.3).
