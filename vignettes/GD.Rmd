@@ -91,8 +91,8 @@ The pacakge provides a one-step function for performing optimal discretization a
 
 ```{r, eval = FALSE}
 ## install and library the pacakge
-install.packages("GD")
-library("GD")
+install.packages("GD", dep = TRUE)
+library(GD)
 
 ## Example 1
 ## NDVI: ndvi_40
