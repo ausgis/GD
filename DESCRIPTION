@@ -39,6 +39,7 @@ Imports:
 Suggests: 
     gdverse (>= 1.6),
     knitr,
-    rmarkdown
+    rmarkdown,
+    spEDM (>= 1.11)
 LazyData: true
 VignetteBuilder: knitr
