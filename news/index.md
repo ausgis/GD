@@ -1,5 +1,7 @@
 # Changelog
 
+## GD 10.10
+
 ## GD 10.9
 
 - Recommended to install `gdverse` version `1.6` or higher

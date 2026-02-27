@@ -189,7 +189,7 @@ install.packages("GD")
 library("GD")
 ```
 
-    ## This is GD 10.9.
+    ## This is GD 10.10.
     ##                         
     ## To cite GD in publications, please use:
     ##                         
