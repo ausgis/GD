@@ -46,15 +46,17 @@ URL = {https://doi.org/10.1080/15481603.2020.1760434}
 - Install from [CRAN](https://CRAN.R-project.org/package=GD) with:
 
 ``` r
-install.packages("GD")
+install.packages("GD", dep = TRUE)
 ```
 
 - Install development binary version from
   [R-universe](https://ausgis.r-universe.dev/GD) with:
 
 ``` r
-install.packages("GD",repos = c("https://ausgis.r-universe.dev",
-                                "https://cloud.r-project.org"))
+install.packages("GD",
+                 repos = c("https://ausgis.r-universe.dev",
+                           "https://cloud.r-project.org"), 
+                 dep = TRUE)
 ```
 
 - Install development source version from
@@ -62,5 +64,5 @@ install.packages("GD",repos = c("https://ausgis.r-universe.dev",
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("ausgis/GD",build_vignettes = TRUE)
+devtools::install_github("ausgis/GD",build_vignettes = TRUE,dep = TRUE)
 ```
