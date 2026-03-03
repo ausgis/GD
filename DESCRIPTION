@@ -3,14 +3,14 @@ Title: Geographical Detectors for Assessing Spatial Factors
 Version: 10.9
 Authors@R: 
     c(
-      person(given = "Wenbo", family = "Lyu",
-             email = "lyu.geosocial@gmail.com", 
-             role = c("aut", "cre"),
-             comment = c(ORCID = "0009-0002-6003-3800")),
       person(given = "Yongze", family = "Song",
              email = "yongze.song@outlook.com", 
              role = c("aut", "cph"),
-             comment = c(ORCID = "0000-0003-3420-9622"))
+             comment = c(ORCID = "0000-0003-3420-9622")),
+      person(given = "Wenbo", family = "Lyu",
+             email = "lyu.geosocial@gmail.com", 
+             role = c("aut", "cre"),
+             comment = c(ORCID = "0009-0002-6003-3800"))
      )
 Description: Geographical detectors for measuring spatial stratified heterogeneity,
              as described in Jinfeng Wang (2010) <doi:10.1080/13658810802443457> and 
