@@ -16,10 +16,10 @@ navbar:
         href: articles/GD.html
 
 authors:
+  Wenbo Lyu:
+    href: https://spatlyu.github.io/
   Yongze Song:
     href: https://yongzesong.com/
-  Wenbo Lv:
-    href: https://spatlyu.github.io/
 
 reference:
 - title: Model
