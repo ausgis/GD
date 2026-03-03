@@ -1,5 +1,7 @@
 # GD 10.9
 
+* Correct maintainer surname spelling.
+
 # GD 10.8
 
 * Recommended to install `gdverse` (>= 1.3).
